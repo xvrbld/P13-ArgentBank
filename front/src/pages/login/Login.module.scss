@@ -2,6 +2,7 @@
     background-color: #12002b;
     flex: 1;
     min-height: 82vh;
+    padding-top: 3em;
 
     .login_content {
         box-sizing: border-box;
@@ -9,10 +10,7 @@
         width: 300px;
         margin: 0 auto;
         padding: 2rem;
-        position: absolute;
-        top: 3rem;
-        left: 0;
-        right: 0;
+
 
         h1 {
             font-size: 1.5em;
