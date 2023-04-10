@@ -1,0 +1,71 @@
+.login {
+    background-color: #12002b;
+    flex: 1;
+    min-height: 82vh;
+    position: relative;
+
+    .login_content {
+        box-sizing: border-box;
+        background-color: white;
+        width: 300px;
+        margin: 0 auto;
+        padding: 2rem;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        right: 0;
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        .input_wrapper {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-bottom: 1rem;
+
+            label {
+                font-weight: bold;
+            }
+
+            input {
+                padding: 5px;
+                font-size: 1.2rem;
+            }
+        }
+
+        .remember {
+            display: flex;
+
+            label {
+                margin-left: 0.25rem;
+            }
+        }
+
+        .sign_in_button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            border-color: #00bc77;
+            background-color: #00bc77;
+            color: #fff;
+        }
+
+        .sign_in_content {
+            box-sizing: border-box;
+            background-color: white;
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 3rem;
+            padding: 2rem;
+        }
+
+        .sign_in_icon {
+            font-size: 5rem;
+        }
+    }
+}
