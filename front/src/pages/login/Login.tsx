@@ -23,7 +23,6 @@ function Login() {
         // After login, get firstname/lastname for user login
         const responseUser = await Profile(token);
         if (responseUser) {
-          console.log(responseUser.firstName)
           dispatch(setFirstname(responseUser.firstName));
           dispatch(setLastname(responseUser.lastName));
         }
