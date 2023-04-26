@@ -1,6 +1,7 @@
 .features {
     display: flex;
     flex-direction: column;
+    width: 100%;
   
     @media (min-width: 920px) {
       flex-direction: row;
@@ -21,21 +22,21 @@
     white-space: nowrap !important; /* 3 */
   }
   
-  .feature_icon {
-    width: 100px;
-    border: 10px solid #00bc77;
-    border-radius: 50%;
-    padding: 1rem;
-  }
-  
   .feature_item {
     flex: 1;
     padding: 2.5rem;
-  }
-  
-  .feature_item_title {
-    color: #222;
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+
+    .feature_icon {
+      width: 100px;
+      border: 10px solid #00bc77;
+      border-radius: 50%;
+      padding: 1rem;
+    }
+
+    .feature_item_title {
+      color: #222;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
   }

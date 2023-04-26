@@ -40,12 +40,26 @@
         .main_nav_item {
             text-decoration: none;
             margin-right: 0.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font: inherit;
 
             .fa {
                 margin-right: 5px;
+                margin-left: 10px;
             }
 
-            :hover {
+            .signin:hover {
+                text-decoration: underline;
+            }
+
+            .signout:hover {
+                text-decoration: underline;
+            }
+
+            .username:hover {
                 text-decoration: underline;
             }
         }
