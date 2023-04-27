@@ -34,6 +34,14 @@
             margin: 2rem;
         }
 
+        @media (max-width: 920px) {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            width: 300px;
+            margin: 2rem;
+        }
+
         .sr_only {
             border: 0 !important;
             clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
