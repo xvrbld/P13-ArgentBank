@@ -9,7 +9,7 @@ import {
   setFirstname,
   setLastname,
 } from "features/user/userSlice";
-import { Profile } from "api/Api";
+import { Profile, Edit } from "api/Api";
 
 function User() {
   const dispatch = useDispatch();
@@ -58,10 +58,19 @@ function User() {
               <div className={styles.buttons}>
                 <button
                   className={styles.saveButton}
-                  onClick={() => {
-                    dispatch(setFirstname(newFirstname));
-                    dispatch(setLastname(newLastname));
-                    setIsEditModeOn(false);
+                  onClick={async () => {
+                    try {
+                      const response = await Edit(
+                        newFirstname,
+                        newLastname,
+                        token
+                      );
+                      dispatch(setFirstname(response.firstName));
+                      dispatch(setLastname(response.lastName));
+                      setIsEditModeOn(false);
+                    } catch (error) {
+                      console.log(error);
+                    }
                   }}
                 >
                   Save
