@@ -15,6 +15,37 @@
       font-weight: bold;
       padding: 10px;
     }
+
+    .editMode {
+      display: flex;
+      flex-direction: column;
+
+      .inputs {
+        input {
+          padding: 10px;
+          font-size: 16px;
+          border: 2px solid gray;
+          border-radius: 5px;
+          margin: 0 5px;
+        }
+      }
+
+      .buttons {
+        button {
+          padding: 10px 40px;
+          margin: 20px 5px;
+          border: 2px solid #00bc77;
+          border-radius: 5px;
+          color: #00bc77;
+          background-color: white;
+          cursor: pointer;
+        }
+
+        .saveButton {
+          margin-left: 15px;
+        }
+      }
+    }
   }
   
   .sr_only {

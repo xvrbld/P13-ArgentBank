@@ -35,8 +35,10 @@ function Header() {
         </NavLink>
         {token && token.length > 3 ? (
           <div>
+            <Link className={styles.main_nav_item} to="/user">
             <i className={"fa fa-user-circle " + styles.fa}></i>
             <span className={styles.username}>{firstname}</span>
+            </Link>
             <Link className={styles.main_nav_item} to="/" onClick={logout}>
               <i className={"fa fa-sign-out " + styles.fa}></i>
               <span className={styles.signout}>Sign Out</span>

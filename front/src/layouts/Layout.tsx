@@ -5,8 +5,8 @@ import User from "pages/user/User";
 import Header from "./header/Header";
 import Footer from "./footer/Footer"
 import NoPage from "../pages/nopage/NoPage";
-import { LoggedGuard } from "guard/LoggedGuard";
-import { NoLoggedGuard } from "guard/NoLoggedGuard";
+import { LoggedOnGuard } from "guard/LoggedOnGuard";
+import { LoggedOutGuard } from "guard/LoggedOutGuard";
 
 function Layout() {
   return (
@@ -15,8 +15,8 @@ function Layout() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<NoLoggedGuard Page={Login}/>} />
-          <Route path="/user" element={<LoggedGuard Page={User} />} />
+          <Route path="/login" element={<LoggedOutGuard Page={Login}/>} />
+          <Route path="/user" element={<LoggedOnGuard Page={User} />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
         <Footer />

@@ -36,58 +36,67 @@ function User() {
 
   return (
     <div className={styles.user}>
-<div className={styles.header}>
-  {isEditModeOn ? (
-    <>
-      <input
-        type="text"
-        value={newFirstname}
-        onChange={(e) => setNewFirstname(e.target.value)}
-      />
-      <input
-        type="text"
-        value={newLastname}
-        onChange={(e) => setNewLastname(e.target.value)}
-      />
-      <button
-        className={styles.save_button}
-        onClick={() => {
-          dispatch(setFirstname(newFirstname));
-          dispatch(setLastname(newLastname));
-          setIsEditModeOn(false);
-        }}
-      >
-        Save
-      </button>
-      <button
-        className={styles.cancel_button}
-        onClick={() => {
-          setIsEditModeOn(false);
-        }}
-      >
-        Cancel
-      </button>
-    </>
-  ) : (
-    <>
-      <h1>
-        Welcome back
-        <br />
-        {firstname} {lastname} !
-      </h1>
-      <button
-        className={styles.edit_button}
-        onClick={() => {
-          setIsEditModeOn(true);
-          setNewFirstname(firstname);
-          setNewLastname(lastname);
-        }}
-      >
-        Edit Name
-      </button>
-    </>
-  )}
-</div>
+      <div className={styles.header}>
+        {isEditModeOn ? (
+          <>
+            <h1>Welcome back</h1>
+            <div className={styles.editMode}>
+              <div className={styles.inputs}>
+                <input
+                  className={styles.inputFirstName}
+                  type="text"
+                  placeholder={firstname}
+                  onChange={(e) => setNewFirstname(e.target.value)}
+                />
+                <input
+                  className={styles.inputLastName}
+                  type="text"
+                  placeholder={lastname}
+                  onChange={(e) => setNewLastname(e.target.value)}
+                />
+              </div>
+              <div className={styles.buttons}>
+                <button
+                  className={styles.saveButton}
+                  onClick={() => {
+                    dispatch(setFirstname(newFirstname));
+                    dispatch(setLastname(newLastname));
+                    setIsEditModeOn(false);
+                  }}
+                >
+                  Save
+                </button>
+                <button
+                  className={styles.cancelButton}
+                  onClick={() => {
+                    setIsEditModeOn(false);
+                  }}
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <h1>
+              Welcome back
+              <br />
+              {firstname} {lastname} !
+            </h1>
+            <button
+              className={styles.edit_button}
+              onClick={() => {
+                setIsEditModeOn(true);
+                setNewFirstname(firstname);
+                setNewLastname(lastname);
+              }}
+            >
+              Edit Name
+            </button>
+          </>
+        )}
+      </div>
       <h2 className={styles.sr_only}>Accounts</h2>
       <Account
         title="Argent Bank Checking (x8349)"
